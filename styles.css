@@ -1,5 +1,5 @@
 .wrapper{
     min-height: 100vh;
     min-width: 100vw;
-    background: linear-gradient(to bottom, violet, pink);
+    background: linear-gradient(to bottom, #f28f3b, #c8553d);
 }

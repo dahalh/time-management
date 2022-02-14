@@ -72,35 +72,24 @@
                     <hr/>
                     <div class="list-items">
                         <table class="table table-striped" >
-                            <tbody>
-
-                            
-                              <tr>
-                
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td class="text-end"><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
+                            <tbody id="bad-list">
+                           
                              
                             </tbody>
                           </table>
                     </div>
                     <!-- <div class="ttl-bad">You could have saved 50 hours</div> -->
                     <div class="ttl-bad text-end text-light">
-                        Total time saved = 50hr
+                        Total time saved = <span id="totalBadHrs"> 0 </span>  hrs
                     </div>
                 </div>
             </div>
 
             <div class="row mt-2m pb-5 fs-3 fw-bolder text-info">
                 <div class="col text-center">
-                    Total time allocated this week = <span id="totalHours"> 0 </span>
-                    hr
+                    Total time allocated this week = <span class= "text-primary" id="totalHours"> 0 </span>
+                    hrs &nbsp; Hours left to allocate = <span class="text-primary" id="hoursLeft"> 0 </span>
+                    hrs
                 </div>
             </div>
 
@@ -112,5 +101,6 @@
         
     <!-- javascript -->
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 </html>
