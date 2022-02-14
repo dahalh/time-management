@@ -29,18 +29,19 @@
             <div class="row">
                 <div class="col">
                     <div class="form-box py-5">
-                            <form class="row row-cols-md-auto d-flex justify-content-center">
+                        
+                            <form action="javascript:void(0)" onsubmit="handleOnSubmit(this)" class="row row-cols-md-auto d-flex justify-content-center g-3">
                                 <div class="col-12">
-                                  <label class="visually-hidden" for="inlineFormInputGroupYourTask">Your Task</label>
+                                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Your Task</label>
                                   <div class="input-group">
-                                    <input type="text" class="form-control" id="inlineFormInputYourTask" placeholder="Your Task">
+                                    <input type="text" name="task" class="form-control" id="inlineFormInputGroupUsername" placeholder="Your Task" required>
                                   </div>
                                 </div>
-                            <form class="row row-cols-lg-auto g-3 align-items-center">
+                            <form class="row row-cols-lg-auto g-3 align-items-center g-3">
                                 <div class="col-12">
-                                  <label class="visually-hidden" for="inlineFormInputGroupHours">Hours</label>
+                                  <label class="visually-hidden" for="inlineFormInputGroupUsername">Hours</label>
                                   <div class="input-group">
-                                    <input type="text" class="form-control" id="inlineFormInputGroupHours" placeholder="Hours">
+                                    <input type="number" name="hr" class="form-control" id="inlineFormInputGroupUsername" placeholder="Hours" required>
                                   </div>
                                 </div>
                               
@@ -60,39 +61,8 @@
                     <hr/>
                     <div class="list-items">
                         <table class="table table-striped" >
-                            <tbody>
-                              <tr>
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
-                              <tr>
-                
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
-                             
+                            <tbody id="task-list">
+
                             </tbody>
                           </table>
                     </div>
@@ -103,26 +73,8 @@
                     <div class="list-items">
                         <table class="table table-striped" >
                             <tbody>
-                              <tr>
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                    <input type="checkbox" name="" id="">
-                                    Watching TV
-                                </td>
-                                <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
-                                    <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
-                                </td>
-                              </tr>
+
+                            
                               <tr>
                 
                                 <td>
@@ -130,7 +82,7 @@
                                     Watching TV
                                 </td>
                                 <td>5hr</td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
+                                <td class="text-end"><button class="btn btn-danger btn-sm"><i class="fas fa-trash" title="Delete"></i></button>
                                     <button class="btn btn-warning btn-sm"><i class="fas fa-arrow-right" title="Mark as bad list"></i></button>
                                 </td>
                               </tr>
@@ -147,8 +99,8 @@
 
             <div class="row mt-2m pb-5 fs-3 fw-bolder text-info">
                 <div class="col text-center">
-                    Total time allocated this week = 50hr
-                    
+                    Total time allocated this week = <span id="totalHours"> 0 </span>
+                    hr
                 </div>
             </div>
 
